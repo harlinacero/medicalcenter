@@ -1,0 +1,38 @@
+# React app in medicalcenter
+mdecialcenter/node_modules/
+mdecialcenter/build/
+mdecialcenter/.env
+mdecialcenter/.DS_Store
+
+# Logs
+mdecialcenter/npm-debug.log*
+mdecialcenter/yarn-debug.log*
+mdecialcenter/yarn-error.log*
+
+# .NET app in MedicalCenterAPI
+MedicalCenterAPI/*/bin/
+MedicalCenterAPI/*/obj/
+MedicalCenterAPI/*/*.user
+MedicalCenterAPI/*/*.suo
+MedicalCenterAPI/*/.vs/
+MedicalCenterAPI/*/.idea/
+MedicalCenterAPI/*/.vscode/
+MedicalCenterAPI/*/appsettings*.json
+MedicalCenterAPI/copilot-chat/
+MedicalCenterAPI/.vs/
+MedicalCenterAPI/Tests/*/bin/
+MedicalCenterAPI/Tests/*/obj/
+MedicalCenterAPI/Tests/*/*.suo
+MedicalCenterAPI/Tests/*/*.user
+MedicalCenterAPI/MedicalCenterAPI/Properties/serviceDependencies.*
+MedicalCenterAPI/MedicalCenterAPI/Properties/serviceDependencies.json
+MedicalCenterAPI/MedicalCenterAPI/Properties/PublishProfiles/
+MedicalCenterAPI/MedicalCenterAPI/Properties/ServiceDependencies/
+MedicalCenterAPI/MedicalCenterAPI/Properties/serviceDependencies/
+
+# General
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
