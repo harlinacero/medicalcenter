@@ -79,7 +79,7 @@ export default function Register() {
                 throw new Error('No se ha iniciado sesión');
             }
             patientData.userName = sessionData.userName
-            if (patientData?.id ?? 0 > 0) {
+            if ((patientData?.id || 0) > 0) {
                 await patientService.updatePatiente(patientData as Patient);
                 setIsModalOpen(true);
             } else {
