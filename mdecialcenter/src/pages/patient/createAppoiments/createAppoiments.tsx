@@ -90,7 +90,7 @@ export default function CreateAppoiments() {
     return (
         <div className="createAppoinments">
             <h1>Agendamiento de citas</h1>
-            <form>
+            <form className="appointment-form">
                 <div className="form-group">
                     <label htmlFor="specialty">Especialidad</label>
                     <select id="specialty" onChange={handleSpecialtyChange} value={selectedSpecialty || ""}>

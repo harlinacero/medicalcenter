@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Session } from "../../models/Session";
 import './sessioninfo.css';
 import { localStorageUtil } from "../../utils/localStorageUtil";
+import { useNavigate } from "react-router-dom";
 
 export default function SessionInfo({ session }: { session: Session }) {
-
+    const navigate = useNavigate();  
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -14,7 +15,7 @@ export default function SessionInfo({ session }: { session: Session }) {
     const handleLogout = () => {
         localStorageUtil.removeToken(); // Elimina el token
         localStorageUtil.removeMenu(); // Elimina el token
-        window.location.href = '/login'; // Redirige al login
+        navigate('/login');
     };
 
     return (

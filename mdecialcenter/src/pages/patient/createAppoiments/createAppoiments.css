@@ -12,7 +12,7 @@
     margin-bottom: 20px;
 }
 
-form {
+.appointment-form {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Espaciado entre los elementos del formulario */

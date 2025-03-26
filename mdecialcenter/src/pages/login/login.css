@@ -87,7 +87,7 @@
     color: #aaa;
 }
 
-.checkbox-group {
+.form-box .checkbox-group {
     display: flex;
     flex-direction: row;
     align-items: center;
