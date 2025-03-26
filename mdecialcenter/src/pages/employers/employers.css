@@ -1,0 +1,49 @@
+.employers {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 400px);
+    box-sizing: border-box;
+}
+
+.section-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.section-body-item {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.payment-table th,
+.payment-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    color: #0f3759;
+}
+
+.payment-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+}
+
+.payment-table td {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section-body-item {
+        flex: 1 1 100%;
+    }
+}

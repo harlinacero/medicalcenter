@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html {
+  font-size: 1rem;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+}
+
+body.contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+body.contrast a {
+  color: #00ffff; 
+}
+
+body.contrast .accessibility-controls {
+  background-color: #fff; 
+  color: #000;
+}
+
+body.contrast .accessibility-controls button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+body.contrast .accessibility-controls button:hover {
+  background-color: #ccc;
+}
+
+.accessibility-controls {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  right: 10px;
+  gap: 15px;
+  z-index: 10000;
+  background-color: #0f3759;
+  border-radius: 15px;
+  padding: .5% .3%;
+}
+
+.accessibility-controls button {
+  background-color: #0F3759;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accessibility-controls button:hover {
+  background-color: #1c4d8c;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Body styles */
+.body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 200px;
+  overflow-y: auto;
+  height: calc(100% - 130px);
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.875rem;
+}
+
+.error-hint {
+  color: red;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .accessibility-controls {
+    display: flex;
+    flex-direction: row;
+    top: 0%;
+    right: 0px;
+    gap: 5px;
+    padding: 5px 8px;
+    border-radius: 0;
+  }
+
+  .accessibility-controls button {
+    border: none;
+    padding: 5px;
+  }
+
+}

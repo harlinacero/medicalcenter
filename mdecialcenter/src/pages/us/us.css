@@ -1,0 +1,143 @@
+/* Contenedor principal */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contenedor de columnas */
+.us-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Columnas */
+.us-column {
+    flex: 1;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Historia */
+.history-section h2 {
+    margin-bottom: 10px;
+    color: #0F3759;
+}
+
+.history-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Sección Matriz */
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Elementos de la matriz */
+.matrix-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Columnas dentro de cada elemento de la matriz */
+.matrix-item-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Estilo para los números */
+.matrix-item-column h3 {
+    font-size: 6.25rem;
+    font-weight: bold;
+    color: #00619b;
+    margin: 0;
+}
+
+/* Estilo para el texto */
+.matrix-item-column p {
+    font-size: 1.15rem;
+    color: #00619b;
+    text-align: left;
+}
+
+/* Estilo para imágenes dentro de la matriz */
+.image-column {
+    background-image: url('../../assets/images/centromedico.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.matrix-item-column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.matrix-item-column-2 h3 {
+    color: #0198e3;
+    font-size: 5.625rem;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.matrix-item-column-2 p {
+    color: #0198e3;
+    font-size: 1.125rem;
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px)  {
+    .matrix {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+}

@@ -1,13 +1,12 @@
-# React app in medicalcenter
-mdecialcenter/node_modules/
-mdecialcenter/build/
-mdecialcenter/.env
-mdecialcenter/.DS_Store
-
-# Logs
-mdecialcenter/npm-debug.log*
-mdecialcenter/yarn-debug.log*
-mdecialcenter/yarn-error.log*
+# react
+*/node_modules/
+*/build/
+*/dist/
+*/.pnp.js
+*/.pnp.js_
+*/.pnp.js.bak
+*/.pnp.js.bak_
+*/package-lock.json
 
 # .NET app in MedicalCenterAPI
 MedicalCenterAPI/*/bin/

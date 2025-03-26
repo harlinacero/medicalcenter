@@ -1,0 +1,72 @@
+.appoiments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appoiments-header-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f3759;
+}
+
+.appoiment-add-button {
+    background-color: #0F3759;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appoiments-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.appoiments-list-item {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.appoiments-list-item-status {
+    padding: 5px 10px;
+}
+
+/* Estilos dinámicos según el estado */
+.appoiments-list-item-status.pendiente {
+    background-color: #fff3cd;
+    /* Amarillo claro */
+    border-left: 0px solid #ffc107;
+    /* Amarillo */
+}
+
+.appoiments-list-item-status.confirmada {
+    background-color: #d4edda;
+    /* Verde claro */
+    border-left: 0px solid #28a745;
+    /* Verde */
+}
+
+.appoiments-list-item-status.cancelada {
+    background-color: #f8d7da;
+    /* Rojo claro */
+    border-left: 0px solid #dc3545;
+    /* Rojo */
+}
+
+.appoiments-list-item-status.completada {
+    background-color: #d1ecf1;
+    /* Azul claro */
+    border-left: 0px solid #17a2b8;
+    /* Azul */
+}
+
+.appoiments-list-item-text {
+    padding: 0px 10px;
+}

@@ -1,0 +1,91 @@
+.careNetwork {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-container {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #0F3759;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group select:focus {
+    border-color: #0F3759;
+    box-shadow: 0 0 5px rgba(15, 55, 89, 0.5);
+    outline: none;
+}
+
+.form-group select:disabled {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+}
+
+
+.medical-centers {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.medical-center {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.medical-center h4 {
+    margin: 0 0 10px 0;
+    color: #0F3759;
+}
+
+.medical-center p {
+    margin: 5px 0;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    form {
+        display: flex;
+        gap: 20px;
+    }
+
+    .form-group {
+        flex: 1;
+    }
+}

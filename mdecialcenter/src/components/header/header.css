@@ -1,0 +1,74 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #B4CBD9;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centra el contenido horizontalmente */
+  padding: 0 20px;
+  /* Espaciado interno para pantallas pequeñas */
+  box-sizing: border-box;
+}
+
+.app-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.app-logo img {
+  height: 100%;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+.button-office {
+  display: flex;
+  align-items: center;
+}
+
+.button-office button {
+  height: 40px;
+  padding: 0 15px;
+  background-color: #0f3759;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-office button:hover {
+  background-color: #1c4d8c;
+  color: white;
+}
+
+
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .app-logo img {
+    max-width: 120px;
+  }
+
+  .button-office button {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+}
