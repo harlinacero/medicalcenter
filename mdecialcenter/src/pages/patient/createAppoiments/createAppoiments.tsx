@@ -174,11 +174,11 @@ export default function CreateAppoiments() {
                                 <strong>Especialidad:</strong> {selectedAppoiment?.specialty}<br />
                                 <strong>Ubicación:</strong> {selectedAppoiment?.location}<br />
                             </p>
-                            <p>Para su comodidad, hemos enviado los detalles de esta cita a su correo electrónico y número de celular registrados</p>
+                            <p>Para su comodidad, hemos enviado los detalles de esta cita a su correo electrónico y número de celular registrados.</p>
                             <p>Si por algún motivo no puede asistir, le agradecemos cancelar su cita con anticipación a través de nuestra oficina virtual
                                 o comunicándose a nuestra línea de gestión de citas.
                             </p>
-                            <p>¡Gracias por confiar en nostros para su atención Médica</p>
+                            <p>¡Gracias por confiar en nostros para su atención Médica!</p>
                         </div>
                         <div className="button-container">
                             <button type="button" onClick={() => navigate('/appointments')}>Volver</button>
