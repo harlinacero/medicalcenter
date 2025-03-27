@@ -1,6 +1,7 @@
 export interface AppoimentsProps {
     id: number;
-    date: Date;
+    date: string;
+    time: string;
     doctor: string;
     location: string;
     specialty: string;

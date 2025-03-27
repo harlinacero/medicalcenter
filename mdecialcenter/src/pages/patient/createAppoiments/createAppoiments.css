@@ -1,7 +1,7 @@
 .createAppoinments {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 20px;
     box-sizing: border-box;
     width: 100%; /* Asegura que ocupe todo el ancho */
@@ -15,9 +15,8 @@
 .appointment-form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaciado entre los elementos del formulario */
-    width: 100%; /* Asegura que el formulario ocupe todo el ancho */
-    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    gap: 20px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -71,6 +70,7 @@ select {
 }
 
 .button-container {
+    width: 100%;
     gap: 20px; /* Espaciado entre los botones */
     text-align: right;
 }
@@ -89,4 +89,21 @@ button[type="button"] {
 
 button[type="button"]:hover {
     background-color: #0056b3;
+}
+
+.appoiment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre los elementos */
+    width: 100%;
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.appoiment-info-container {
+    gap: 20px; /* Espaciado entre los elementos */
+    max-width: 600px;
 }

@@ -6,7 +6,8 @@ import { AppoimentsProps, AppoimentsStatus } from '../../../models/AppoimentsPro
 const appoiments: AppoimentsProps[] = [
     {
         id: 1,
-        date: new Date(),
+        date: "Lunes 10 de Mayo",
+        time: "10:00 AM",
         doctor: "Dr. Juan Pérez",
         location: "Hospital General",
         specialty: "Cardiología",
@@ -14,7 +15,8 @@ const appoiments: AppoimentsProps[] = [
     },
     {
         id: 2,
-        date: new Date(),
+        date: "Martes 11 de Mayo",
+        time: "11:00 AM",
         doctor: "Dr. Juan Pérez",
         location: "Hospital General",
         specialty: "Cardiología",
@@ -22,7 +24,8 @@ const appoiments: AppoimentsProps[] = [
     },
     {
         id: 3,
-        date: new Date(),
+        date: "Miércoles 12 de Mayo",
+        time: "10:00 AM",
         doctor: "Dr. Juan Pérez",
         location: "Hospital General",
         specialty: "Cardiología",
@@ -30,7 +33,8 @@ const appoiments: AppoimentsProps[] = [
     },
     {
         id: 4,
-        date: new Date(),
+        date: "Jueves 13 de Mayo",
+        time: "11:00 AM",
         doctor: "Dr. Juan Pérez",
         location: "Hospital General",
         specialty: "Cardiología",
@@ -65,7 +69,7 @@ export default function Appoiments() {
                                 <p>{appoiment.status}</p>
                             </div>
                             <div className="appoiments-list-item-text">                                
-                                <p>Fecha: {appoiment.date.toLocaleDateString()} - {appoiment.date.toLocaleTimeString()}</p>
+                                <p>Fecha: {appoiment.date}</p>
                             </div>
                             <div className="appoiments-list-item-text">
                                 <p>Especialista: <b>{appoiment.doctor}</b></p>
