@@ -6,13 +6,28 @@ using System.Threading.Tasks;
 
 namespace MedicalCenterDomain.Enums
 {
+    /// <summary>
+    /// Enumerado de roles
+    /// </summary>
     public enum RoleEnum
     {
+        /// <summary>
+        /// Rol de administrador
+        /// </summary>
         Admin = 1,
+        /// <summary>
+        /// Rol de doctor
+        /// </summary>
         Doctor,
+        /// <summary>
+        /// Rol de paciente
+        /// </summary>
         Patient
     }
 
+    /// <summary>
+    /// Enumerado de especialidades médicas
+    /// </summary>
     public enum SpecialityEnum
     {
         General = 1,
@@ -51,9 +66,18 @@ namespace MedicalCenterDomain.Enums
         RespiratoryTherapist,
     }
 
+    /// <summary>
+    /// Enumerado de género
+    /// </summary>
     public enum GenderEnum
     {
+        /// <summary>
+        /// Género masculino
+        /// </summary>
         Male = 1,
+        /// <summary>
+        /// Género femenino
+        /// </summary>
         Female
     }
 }

@@ -16,6 +16,11 @@ namespace MedicalCenterAPI.Controllers
             _userService = userService;
         }
 
+        /// <summary>
+        /// Crea un nuevo paciente en la plataforma
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPost]
         [Authorize(Roles = "Patient" )]
         public async Task<IActionResult> CreatePatientAsync(Patient user)
@@ -31,6 +36,11 @@ namespace MedicalCenterAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Actualiza la información de un paciente
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPut]
         [Authorize(Roles = "Patient")]
         public async Task<IActionResult> UpdatePatientAsync(Patient user)
@@ -46,6 +56,11 @@ namespace MedicalCenterAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Elimina un paciente de la plataforma
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         [HttpGet("{userId}")]
         [Authorize(Roles = "Patient")]
         public async Task<IActionResult> GetPatientAsync(int userId)

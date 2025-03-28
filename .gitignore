@@ -16,7 +16,6 @@ MedicalCenterAPI/*/*.suo
 MedicalCenterAPI/*/.vs/
 MedicalCenterAPI/*/.idea/
 MedicalCenterAPI/*/.vscode/
-MedicalCenterAPI/*/appsettings*.json
 MedicalCenterAPI/copilot-chat/
 MedicalCenterAPI/.vs/
 MedicalCenterAPI/Tests/*/bin/

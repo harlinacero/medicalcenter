@@ -16,6 +16,11 @@ namespace MedicalCenterAPI.Controllers
             _authService = authService;
         }
 
+        /// <summary>
+        /// Iniciar sesión de un usuario, reconoce el rol del usario y genera un token y el menú correspondiente
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
         [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> LoginAsync(LoginDto login)
@@ -31,6 +36,11 @@ namespace MedicalCenterAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Registrar un nuevo usuario, solo aplica para el tipo paciente
+        /// </summary>
+        /// <param name="register"></param>
+        /// <returns></returns>
         [HttpPost("register")]
         [AllowAnonymous]
         public async Task<IActionResult> RegisterAsync(RegisterDto register)
