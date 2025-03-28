@@ -34,7 +34,7 @@ cd medicalcenter
 ## Backend 
 El backend ubicado en la carpeta `MedicalCenterAPI` contiene expone los servicios (endpoints) para la autenticación, creación y edición de los usuarios médicos o pacientes y la lógica de negocio correspondiente para que esta información se almacene en una base de datos.
 
-
+[Documentación del Backend](./MedicalCenterAPI/README.md)
 ### Configuración
 1. Navega a la carpeta del backend:
 ```bash
@@ -76,6 +76,8 @@ Luego, copia los archivos publicados al servidor y configura el entorno de produ
 
 ## FrontEnd
 El frontend de la aplicación está ubicado en la carpeta `mdecialcenter`. Permite al usuario interactuar con la interfaz gráfica de la aplicación, la cual sigue los criterios de diseño, accesibilidad y usabilidad recomendados.
+
+[Documentación del Frontend](./mdecialcenter/README.md)
 
 ### Configuración del Frontend (React.js)
 1. Navega a la carpeta del frontend:
