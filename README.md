@@ -6,7 +6,7 @@ Medical Center es una aplicación para la gestión de citas médicas. La aplicac
 
 La aplicación está compuesta por dos partes: el backend (C# .Net) y el fronend (React.js), los cuales siguen una arquitectura de N Capas orientada al dominio, es decir, que toda la lógica del negocio y las operaciones principales se encuentran abstraidas de las implementaciones, por lo que es indiferente si se usa una vista u otra, o el motor de base de datos que persiste la información.
 
-![alt text](<medicalcenter-Mapa de navegación paciente-Arquitectura General.drawio.png>)
+
 
 La información más detallada de cada parte se encuentra en el archivo readme correspondiente.
 

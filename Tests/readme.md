@@ -1,5 +1,12 @@
 # Pruebas de Usabilidad
 Se realizan pruebas de usabilidad para identificar problemáticas específicas dentro de la aplicación y el comportamiento de los usuarios durante cada proceso. 
+
+## Wave
+Se somete la página a validación con wave. El resultado: https://wave.webaim.org/report#/https://happy-tree-0a6cbc31e.6.azurestaticapps.net/home
+
+![alt text](image-6.png)
+
+
 ## Encuesta de Usabilidad SUS
 Mediante la encuesta SUS (System Usability Scale) se puede evaluar la usabilidad del sistema de forma rápida (Busquets, Medir la usabilidad con el Sistema de Escalas de Usabilidad (SUS), s.f.). A partir de una puntuación de 1 a 5, donde 1 es Totalmente en desacuerdo y 5 Totalmente de acuerdo, se han calificado cada uno de los aspectos sugeridos por la encuesta, de donde se obtiene el siguiente resultado:
 

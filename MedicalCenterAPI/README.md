@@ -50,7 +50,7 @@ El backend en .Net 8 con C# es una aplicación de N capas orientada al dominio (
 
 En total en este proyecto se distinguen 3 capas, la capa de dominio, la capa de infraestructura y la capa de presentación o API.
 
-
+![alt text](image-2.png)
 
 #### Capa de dominio
 Contiene las entidades de negocio (User, Patiente, Doctor, City, CivilStatus, Disability, DocumentType, etc.), los servicios que contienen la lógica de las operaciones de estos objetos (Registro, login, CRUDs, Agendamiento de citas, etc.) y las interfaces del patrón Repositorio.
