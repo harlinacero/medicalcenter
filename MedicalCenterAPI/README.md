@@ -1,78 +1,92 @@
-# Medical Center
+# Medical Center — Backend
 
-Medical Center es una aplicación para la gestión de citas médicas. La aplicación está creada con las tecnologías React.js para el frontend y .NET 8 para el backend.
+Medical Center is an application for managing medical appointments. It is built with React.js on the frontend and .NET 8 on the backend.
 
-El backend contiene expone los servicios (endpoints) para la autenticación, creación y edición de los usuarios médicos o pacientes y la lógica de negocio correspondiente para que esta información se almacene en una base de datos.
+The backend exposes services (endpoints) for authentication, creating and editing doctor or patient users, and the business logic required to persist that information in a database.
 
+### Setup
 
-### Configuración
-1. Navega a la carpeta del backend:
+1. Go to the backend folder:
+
 ```bash
 cd MedicalCenterAPI
 ```
-2. Restaura las dependencias del proyecto
+
+2. Restore the project dependencies:
+
 ```
 dotnet restore
 ```
-3. Configura la cadena de conexión a la base de datos en el archivo `appsettings.json`:
+
+3. Configure the database connection string in `appsettings.json`:
 
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=TU_SERVIDOR;Database=MedicalCenterDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=YOUR_SERVER;Database=MedicalCenterDB;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
 ```
-Asegúrate de reemplazar `TU_SERVIDOR` con el nombre de tu servidor SQL y `MedicalCenterDB` con el nombre de tu base de datos.
 
-4. Aplica las migraciones para crear la base de datos:
+Replace `YOUR_SERVER` with your SQL server name and `MedicalCenterDB` with your database name.
+
+4. Apply migrations to create the database:
 
 ```
 dotnet ef database update
 ```
-5. Ejecutar la API:
+
+5. Run the API:
+
 ```
 dotnet run
 ```
-La API estará disponible en `https://localhost:7051` o `http://localhost:44313`
 
-### Despliegue
-Para desplegar el backend en un servidor, publica el proyecto con el siguiente comando:
+The API will be available at `https://localhost:7051` or `http://localhost:44313`.
+
+### Deployment
+
+To deploy the backend to a server, publish the project with the following command:
 
 ```
 dotnet publish -c Release -o ./publish
 ```
-Luego, copia los archivos publicados al servidor y configura el entorno de producción.
 
-### Arquitectura 
+Then copy the published files to the server and configure the production environment.
 
-El backend en .Net 8 con C# es una aplicación de N capas orientada al dominio (DDD) donde, la lógica de negocio se encuentra en la capa de dominio y es independiente de la persistencia y los controladores.
+### Architecture
 
-En total en este proyecto se distinguen 3 capas, la capa de dominio, la capa de infraestructura y la capa de presentación o API.
+The .NET 8 / C# backend is an N-layer, domain-driven (DDD) application. Business logic lives in the domain layer and is independent of persistence and controllers.
 
-![alt text](image-2.png)
+This project has three layers: domain, infrastructure, and presentation (API).
 
-#### Capa de dominio
-Contiene las entidades de negocio (User, Patiente, Doctor, City, CivilStatus, Disability, DocumentType, etc.), los servicios que contienen la lógica de las operaciones de estos objetos (Registro, login, CRUDs, Agendamiento de citas, etc.) y las interfaces del patrón Repositorio.
+![Backend N-layer architecture](image-2.png)
 
-![alt text](<medicalcenter-Mapa de navegación paciente-Capa de dominio Usuarios.drawio-1.png>)
+#### Domain layer
 
-#### Capa de infraestructura
-En este caso, la capa de infraestuctura contiene solo dos operaciones: la lógica de creación a la base de datos y la implementación de las interfaces del patrón repositorio.
-El patrón repositorio separa la capa de datos de la lógica de negocios de la aplicación, es decir, oculta de las demás capas las operaciones necesarias sobre una base de datos, de forma tal que, las demás capas de la aplicación ignoran cual es la tecnología de base de datos utilizada. Este patrón es ideal cuando la aplicación es suceptible al cambio de motor de base de datos u otras formas de persistir la información.
+Contains the business entities (user, patient, doctor, city, marital status, disability, document type, and so on), the services with the logic for those objects (registration, login, CRUD operations, appointment scheduling, and so on), and the repository-pattern interfaces.
 
-![alt text](<medicalcenter-Mapa de navegación paciente-Capa de Infraestructura.drawio.png>)
+![User domain layer](<medicalcenter-Mapa de navegación paciente-Capa de dominio Usuarios.drawio-1.png>)
 
-#### Capa de Presentación - API
-La capa de presentación contiene la configuración del proyecto, el patrón de inyección de dependencias para vincular las interfaces con sus respectivas implementaciones y, principalmente los controladores del API REST para comunicar el backend con el front end por los métodos HTTP POST, PUT, GET y DELETE.
+#### Infrastructure layer
 
-Esta capa presenta además la documentación OpenAPI a través de la interfaz swagger, donde se muestran los controladores con sus endpoint, métodos, parámetros de entrada y objetos de respuesta.
+In this project, the infrastructure layer has two responsibilities: database connection logic and implementations of the repository-pattern interfaces.
 
-![alt text](image.png)
+The repository pattern separates the data layer from business logic: it hides database operations from the other layers so the rest of the application does not depend on the persistence technology in use. This pattern is a good fit when the application may switch database engines or another form of persistence.
 
-### Pruebas unitarias
+![Infrastructure layer](<medicalcenter-Mapa de navegación paciente-Capa de Infraestructura.drawio.png>)
 
-Cada proyecto del backend tiene su propio proyecto de pruebas.
-Se utiliza XUnit y Moq para facilitar su creación.
+#### Presentation layer — API
 
-![alt text](image-1.png)
+The presentation layer contains project configuration, dependency injection to bind interfaces to their implementations, and, mainly, the REST API controllers that connect the backend to the frontend through HTTP POST, PUT, GET, and DELETE.
+
+This layer also provides OpenAPI documentation through the Swagger UI, which lists controllers with their endpoints, methods, input parameters, and response objects.
+
+![OpenAPI documentation in Swagger](image.png)
+
+### Unit tests
+
+Each backend project has its own test project.
+xUnit and Moq are used to make tests easier to write.
+
+![Unit test projects](image-1.png)
