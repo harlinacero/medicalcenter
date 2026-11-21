@@ -1,103 +1,124 @@
 # Medical Center
 
-Medical Center es una aplicación para la gestión de citas médicas. La aplicación está creada con las tecnologías React.js para el frontend y .NET 8 para el backend.
+Medical Center is an application for managing medical appointments. It is built with React.js on the frontend and .NET 8 on the backend.
 
-## Arquitectura General
+## Overall architecture
 
-La aplicación está compuesta por dos partes: el backend (C# .Net) y el fronend (React.js), los cuales siguen una arquitectura de N Capas orientada al dominio, es decir, que toda la lógica del negocio y las operaciones principales se encuentran abstraidas de las implementaciones, por lo que es indiferente si se usa una vista u otra, o el motor de base de datos que persiste la información.
+The application has two parts: the backend (C# and .NET) and the frontend (React.js). Both follow an N-layer, domain-oriented architecture: business logic and core operations are abstracted from implementations. The UI and the database engine used for persistence can therefore change independently.
 
+More detailed information for each part is in the corresponding README file.
 
+## Prerequisites
 
-La información más detallada de cada parte se encuentra en el archivo readme correspondiente.
-
-## Requisitos previos
-
-Antes de comenzar, asegúrate de tener instalados los siguientes programas en tu máquina:
+Before you start, make sure the following programs are installed:
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (versión 16 o superior)
-- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
-- [Visual Studio](https://visualstudio.microsoft.com/) con el SDK de .NET 8 instalado
-- [SQL Server](https://www.microsoft.com/en-us/sql-server) o cualquier base de datos compatible con .NET
+- [Node.js](https://nodejs.org/) (version 16 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Visual Studio](https://visualstudio.microsoft.com/) with the .NET 8 SDK installed
+- [SQL Server](https://www.microsoft.com/sql-server) or any database compatible with .NET
 
 ---
 
-## Clonar el repositorio
+## Clone the repository
 
-Para clonar el repositorio, ejecuta el siguiente comando en tu terminal:
+To clone the repository, run the following command in your terminal:
 
 ```bash
-git clone https://github.com/tu-usuario/medicalcenter.git
+git clone https://github.com/your-username/medicalcenter.git
 cd medicalcenter
 ```
 
-## Backend 
-El backend ubicado en la carpeta `MedicalCenterAPI` contiene expone los servicios (endpoints) para la autenticación, creación y edición de los usuarios médicos o pacientes y la lógica de negocio correspondiente para que esta información se almacene en una base de datos.
+## Backend
 
-[Documentación del Backend](./MedicalCenterAPI/README.md)
-### Configuración
-1. Navega a la carpeta del backend:
+The backend, located in the `MedicalCenterAPI` folder, exposes services (endpoints) for authentication, creating and editing doctor or patient users, and the business logic required to persist that information in a database.
+
+[Backend documentation](./MedicalCenterAPI/README.md)
+
+### Setup
+
+1. Go to the backend folder:
+
 ```bash
 cd MedicalCenterAPI
 ```
-2. Restaura las dependencias del proyecto
+
+2. Restore the project dependencies:
+
 ```
 dotnet restore
 ```
-3. Configura la cadena de conexión a la base de datos en el archivo `appsettings.json`:
+
+3. Configure the database connection string in `appsettings.json`:
 
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=TU_SERVIDOR;Database=MedicalCenterDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=YOUR_SERVER;Database=MedicalCenterDB;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
 ```
-Asegúrate de reemplazar `TU_SERVIDOR` con el nombre de tu servidor SQL y `MedicalCenterDB` con el nombre de tu base de datos.
 
-4. Aplica las migraciones para crear la base de datos:
+Replace `YOUR_SERVER` with your SQL server name and `MedicalCenterDB` with your database name.
+
+4. Apply migrations to create the database:
 
 ```
 dotnet ef database update
 ```
-5. Ejecutar la API:
+
+5. Run the API:
+
 ```
 dotnet run
 ```
-La API estará disponible en `https://localhost:7051` o `http://localhost:44313`
 
-### Despliegue
-Para desplegar el backend en un servidor, publica el proyecto con el siguiente comando:
+The API will be available at `https://localhost:7051` or `http://localhost:44313`.
+
+### Deployment
+
+To deploy the backend to a server, publish the project with the following command:
 
 ```
 dotnet publish -c Release -o ./publish
 ```
-Luego, copia los archivos publicados al servidor y configura el entorno de producción.
 
-## FrontEnd
-El frontend de la aplicación está ubicado en la carpeta `mdecialcenter`. Permite al usuario interactuar con la interfaz gráfica de la aplicación, la cual sigue los criterios de diseño, accesibilidad y usabilidad recomendados.
+Then copy the published files to the server and configure the production environment.
 
-[Documentación del Frontend](./mdecialcenter/README.md)
+## Frontend
 
-### Configuración del Frontend (React.js)
-1. Navega a la carpeta del frontend:
+The application frontend is located in the `mdecialcenter` folder. It lets users interact with the graphical interface, which follows recommended design, accessibility, and usability criteria.
+
+[Frontend documentation](./mdecialcenter/README.md)
+
+### Frontend setup (React.js)
+
+1. Go to the frontend folder:
+
 ```
 cd mdecialcenter
 ```
 
-2. Instala las dependencias:
+2. Install the dependencies:
+
 ```
 npm install
 ```
-3. Inicia la aplicación:
+
+3. Start the application:
+
 ```
 npm start
 ```
-La aplicación estará disponible en http://localhost:3000.
 
-### Despliegue
-Para construir la aplicación para producción, ejecuta:
+The application will be available at http://localhost:3000.
+
+### Deployment
+
+To build the application for production, run:
+
 ```
 npm run build
 ```
-Esto generará una carpeta `build` que puedes desplegar en cualquier servidor web.
+
+This will generate a `build` folder that you can deploy to any web server.
